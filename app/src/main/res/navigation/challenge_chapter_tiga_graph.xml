@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/challenge_chapter_tiga_graph"
+    app:startDestination="@id/fragmentHalaman1">
+    <fragment
+        android:id="@+id/fragmentHalaman1"
+        android:name="com.muhammadhusniabdillah.challengechaptertiga.fragments.FragmentHalaman1"
+        android:label="fragment_halaman1"
+        tools:layout="@layout/fragment_halaman1" >
+        <action
+            android:id="@+id/action_fragmentHalaman1_to_fragmentHalaman2"
+            app:destination="@id/fragmentHalaman2"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHalaman2"
+        android:name="com.muhammadhusniabdillah.challengechaptertiga.fragments.FragmentHalaman2"
+        android:label="fragment_halaman2"
+        tools:layout="@layout/fragment_halaman2" >
+        <action
+            android:id="@+id/action_fragmentHalaman2_to_fragmentHalaman3"
+            app:destination="@id/fragmentHalaman3"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" >
+            <argument
+                android:name="nama"
+                android:defaultValue="Nama diisi dulu dong!" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHalaman3"
+        android:name="com.muhammadhusniabdillah.challengechaptertiga.fragments.FragmentHalaman3"
+        android:label="fragment_halaman3"
+        tools:layout="@layout/fragment_halaman3" >
+        <action
+            android:id="@+id/action_fragmentHalaman3_to_fragmentHalaman4"
+            app:destination="@id/fragmentHalaman4"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+        <argument
+            android:name="nama"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="Nama diisi dulu dong!" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHalaman4"
+        android:name="com.muhammadhusniabdillah.challengechaptertiga.fragments.FragmentHalaman4"
+        android:label="fragment_halaman4"
+        tools:layout="@layout/fragment_halaman4" >
+        <action
+            android:id="@+id/action_fragmentHalaman4_to_fragmentHalaman3"
+            app:destination="@id/fragmentHalaman3"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+</navigation>

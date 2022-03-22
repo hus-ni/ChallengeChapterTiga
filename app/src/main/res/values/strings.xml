@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ChallengeChapterTiga</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="string_fragment_page_title">Fragment Page</string>
+    <string name="string_goto_next_page">Go To Screen</string>
+    <string name="string_masukkan_nama">Masukkan Nama</string>
+    <string name="string_outputnama">Nama Anda</string>
+    <string name="string_suku_bunga">Suku Bunga</string>
+    <string name="string_total_tabungan">Total Tabungan</string>
+    <string name="string_jangka_waktu_bulan">Jangka Waktu (Bulan)</string>
 </resources>
