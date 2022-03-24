@@ -8,4 +8,9 @@
     <string name="string_suku_bunga">Suku Bunga</string>
     <string name="string_total_tabungan">Total Tabungan</string>
     <string name="string_jangka_waktu_bulan">Jangka Waktu (Bulan)</string>
+    <string name="string_nama_bank">Nama Bank</string>
+    <string name="string_tv_suku_bunga_p_a">Suku Bunga : (%p/a)</string>
+    <string name="string_tv_total_tabungan">Total Tabungan :</string>
+    <string name="string_tv_lama_bunga_tersimpan_bulan">Lama Bunga Tersimpan : (Bulan)</string>
+    <string name="string_tv_total_bunga_yang_didapat_rp_blabla_per_3_bulan">Total Bunga yang didapat : Rp.blabla per 3 Bulan</string>
 </resources>

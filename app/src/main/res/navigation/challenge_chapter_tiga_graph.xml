@@ -11,9 +11,7 @@
         tools:layout="@layout/fragment_halaman1" >
         <action
             android:id="@+id/action_fragmentHalaman1_to_fragmentHalaman2"
-            app:destination="@id/fragmentHalaman2"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:destination="@id/fragmentHalaman2" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHalaman2"
@@ -22,12 +20,10 @@
         tools:layout="@layout/fragment_halaman2" >
         <action
             android:id="@+id/action_fragmentHalaman2_to_fragmentHalaman3"
-            app:destination="@id/fragmentHalaman3"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" >
+            app:destination="@id/fragmentHalaman3">
             <argument
                 android:name="nama"
-                android:defaultValue="Nama diisi dulu dong!" />
+                android:defaultValue="null" />
         </action>
     </fragment>
     <fragment
@@ -37,14 +33,16 @@
         tools:layout="@layout/fragment_halaman3" >
         <action
             android:id="@+id/action_fragmentHalaman3_to_fragmentHalaman4"
-            app:destination="@id/fragmentHalaman4"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:destination="@id/fragmentHalaman4" />
         <argument
             android:name="nama"
             app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="data_halaman_4"
+            app:argType="com.muhammadhusniabdillah.challengechaptertiga.SukuBunga"
             app:nullable="true"
-            android:defaultValue="Nama diisi dulu dong!" />
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHalaman4"
@@ -53,8 +51,10 @@
         tools:layout="@layout/fragment_halaman4" >
         <action
             android:id="@+id/action_fragmentHalaman4_to_fragmentHalaman3"
-            app:destination="@id/fragmentHalaman3"
-            app:enterAnim="@android:anim/fade_in"
-            app:exitAnim="@android:anim/fade_out" />
+            app:destination="@id/fragmentHalaman3" >
+            <argument
+                android:name="nama"
+                android:defaultValue="null" />
+        </action>
     </fragment>
 </navigation>

@@ -37,4 +37,9 @@ class FragmentHalaman1 : Fragment(R.layout.fragment_halaman1) {
                 .navigate(R.id.action_fragmentHalaman1_to_fragmentHalaman2)
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }

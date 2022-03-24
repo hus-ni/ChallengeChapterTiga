@@ -19,14 +19,57 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tv_outputnama_fragment_three"
+        android:id="@+id/tv_number0_fragment_three"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="18dp"
         android:fontFamily="sans-serif-medium"
-        android:text="@string/string_outputnama"
+        android:text="@string/string_nama_bank"
         android:textAlignment="center"
-        android:textSize="22sp"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_number1_fragment_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_number1_fragment_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/string_tv_suku_bunga_p_a"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_number2_fragment_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_number2_fragment_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/string_tv_total_tabungan"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/tv_number3_fragment_three"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_number3_fragment_three"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/string_tv_lama_bunga_tersimpan_bulan"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@id/btn_movetofrag4_fragment_three"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -35,6 +78,7 @@
         android:id="@+id/btn_movetofrag4_fragment_three"
         android:layout_width="wrap_content"
         android:layout_height="64dp"
+        android:layout_marginTop="128dp"
         android:text="@string/string_goto_next_page"
         android:textAllCaps="false"
         app:cornerRadius="8dp"

@@ -2,11 +2,13 @@ package com.muhammadhusniabdillah.challengechaptertiga.fragments
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.text.TextUtils
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.muhammadhusniabdillah.challengechaptertiga.R
 import com.muhammadhusniabdillah.challengechaptertiga.databinding.FragmentHalaman2Binding
 
@@ -33,11 +35,26 @@ class FragmentHalaman2 : Fragment(R.layout.fragment_halaman2) {
         binding.btnMovetofrag3FragmentTwo.text = "$button 3"
 
         binding.btnMovetofrag3FragmentTwo.setOnClickListener{
-            val sendDataToFragmentHalaman3 = FragmentHalaman2Directions.actionFragmentHalaman2ToFragmentHalaman3()
-            sendDataToFragmentHalaman3.nama = binding.etNamaFragmentTwo.editText?.text.toString()
-            findNavController()
-                .navigate(sendDataToFragmentHalaman3)
+
+            if (TextUtils.isEmpty(binding.etNamaFragmentTwo.editText?.text.toString())) {
+                Snackbar.make(
+                    view,
+                    "Nama harus diisi dulu!",
+                    Snackbar.LENGTH_LONG
+                ).show()
+            } else {
+                val sendDataToFragmentHalaman3 = FragmentHalaman2Directions.actionFragmentHalaman2ToFragmentHalaman3()
+                sendDataToFragmentHalaman3.nama = binding.etNamaFragmentTwo.editText?.text.toString()
+                findNavController()
+                    .navigate(sendDataToFragmentHalaman3)
+            }
+
 
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }
