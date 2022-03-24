@@ -11,7 +11,9 @@
         tools:layout="@layout/fragment_halaman1" >
         <action
             android:id="@+id/action_fragmentHalaman1_to_fragmentHalaman2"
-            app:destination="@id/fragmentHalaman2" />
+            app:destination="@id/fragmentHalaman2"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/fragmentHalaman2"
@@ -20,7 +22,9 @@
         tools:layout="@layout/fragment_halaman2" >
         <action
             android:id="@+id/action_fragmentHalaman2_to_fragmentHalaman3"
-            app:destination="@id/fragmentHalaman3">
+            app:destination="@id/fragmentHalaman3"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right">
             <argument
                 android:name="nama"
                 android:defaultValue="null" />
@@ -33,7 +37,9 @@
         tools:layout="@layout/fragment_halaman3" >
         <action
             android:id="@+id/action_fragmentHalaman3_to_fragmentHalaman4"
-            app:destination="@id/fragmentHalaman4" />
+            app:destination="@id/fragmentHalaman4"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
         <argument
             android:name="nama"
             app:argType="string"
@@ -51,7 +57,9 @@
         tools:layout="@layout/fragment_halaman4" >
         <action
             android:id="@+id/action_fragmentHalaman4_to_fragmentHalaman3"
-            app:destination="@id/fragmentHalaman3" >
+            app:destination="@id/fragmentHalaman3"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right">
             <argument
                 android:name="nama"
                 android:defaultValue="null" />
