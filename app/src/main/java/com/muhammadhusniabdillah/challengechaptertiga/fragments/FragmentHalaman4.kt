@@ -1,6 +1,5 @@
 package com.muhammadhusniabdillah.challengechaptertiga.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -27,13 +26,12 @@ class FragmentHalaman4 : Fragment(R.layout.fragment_halaman4) {
         return binding.root
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val title = getString(R.string.string_fragment_page_title)
-        binding.tvTitleFragmentFour.text = "$title Four"
-        val button = getString(R.string.string_goto_next_page)
-        binding.btnMovetofrag3FragmentFour.text = "$button 3"
+        val title = getString(R.string.string_fragment_page_title, "Four")
+        binding.tvTitleFragmentFour.text = title
+        val button = getString(R.string.string_goto_next_page, "3")
+        binding.btnMovetofrag3FragmentFour.text = button
 
 
         binding.btnMovetofrag3FragmentFour.setOnClickListener {
@@ -43,8 +41,9 @@ class FragmentHalaman4 : Fragment(R.layout.fragment_halaman4) {
                 || TextUtils.isEmpty(binding.etTotalTabunganFragmentFour.editText?.text.toString())
                 || TextUtils.isEmpty(binding.etLamaTersimpanFragmentFour.editText?.text.toString())
             ) {
-                Snackbar.make(view,
-                    "Semua Field harus diisi! Tidak boleh kosong",
+                Snackbar.make(
+                    binding.coorLayout,
+                    getString(R.string.error_empty_input_halaman4),
                     Snackbar.LENGTH_LONG
                 ).show()
             } else {
@@ -56,7 +55,7 @@ class FragmentHalaman4 : Fragment(R.layout.fragment_halaman4) {
                 val lamaTersimpan =
                     binding.etLamaTersimpanFragmentFour.editText?.text.toString().toInt()
 
-                //here to put data parcelable
+                //here to bungkhus data parcelable
                 val data = SukuBunga(
                     namaBank,
                     sukuBunga,
@@ -64,7 +63,7 @@ class FragmentHalaman4 : Fragment(R.layout.fragment_halaman4) {
                     lamaTersimpan
                 )
                 // rumus hitung
-                val hitungBunga = ((((sukuBunga/100) / 12) * totalTabungan) * lamaTersimpan)
+                val hitungBunga = ((((sukuBunga / 100) / 12) * totalTabungan) * lamaTersimpan)
 
                 // Directions dari action fragment 4 ke fragment 3
                 val sendDataToFragment3 =
@@ -74,7 +73,6 @@ class FragmentHalaman4 : Fragment(R.layout.fragment_halaman4) {
 
                 // menggunakan argument 'nama' yang tidak dipakai pada saat sampai di fragment 4
                 // untuk mengirim data hasil perhitungan menggunakan safeargs
-
 
                 findNavController()
                     .navigate(sendDataToFragment3)

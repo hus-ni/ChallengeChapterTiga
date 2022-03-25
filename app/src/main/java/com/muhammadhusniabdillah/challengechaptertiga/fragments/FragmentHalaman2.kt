@@ -1,6 +1,5 @@
 package com.muhammadhusniabdillah.challengechaptertiga.fragments
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.text.TextUtils
 import androidx.fragment.app.Fragment
@@ -26,30 +25,29 @@ class FragmentHalaman2 : Fragment(R.layout.fragment_halaman2) {
         return binding.root
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val title = getString(R.string.string_fragment_page_title)
-        binding.tvTitleFragmentTwo.text = "$title Two"
-        val button = getString(R.string.string_goto_next_page)
-        binding.btnMovetofrag3FragmentTwo.text = "$button 3"
+        val title = getString(R.string.string_fragment_page_title, "Two")
+        binding.tvTitleFragmentTwo.text = title
+        val button = getString(R.string.string_goto_next_page, "3")
+        binding.btnMovetofrag3FragmentTwo.text = button
 
-        binding.btnMovetofrag3FragmentTwo.setOnClickListener{
-
+        binding.btnMovetofrag3FragmentTwo.setOnClickListener {
+            // cek apakah input nama kosong
             if (TextUtils.isEmpty(binding.etNamaFragmentTwo.editText?.text.toString())) {
                 Snackbar.make(
-                    view,
-                    "Nama harus diisi dulu!",
+                    binding.coorLayout,
+                    getString(R.string.error_et_halaman2),
                     Snackbar.LENGTH_LONG
                 ).show()
             } else {
-                val sendDataToFragmentHalaman3 = FragmentHalaman2Directions.actionFragmentHalaman2ToFragmentHalaman3()
-                sendDataToFragmentHalaman3.nama = binding.etNamaFragmentTwo.editText?.text.toString()
+                val sendDataToFragmentHalaman3 =
+                    FragmentHalaman2Directions.actionFragmentHalaman2ToFragmentHalaman3()
+                sendDataToFragmentHalaman3.nama =
+                    binding.etNamaFragmentTwo.editText?.text.toString()
                 findNavController()
                     .navigate(sendDataToFragmentHalaman3)
             }
-
-
         }
     }
 

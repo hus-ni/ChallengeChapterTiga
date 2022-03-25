@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ChallengeChapterTiga</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="string_fragment_page_title">Fragment Page</string>
-    <string name="string_goto_next_page">Go To Screen</string>
+    <string name="string_fragment_page_title">Fragment Page %s</string>
+    <string name="string_goto_next_page">Go To Screen %s</string>
     <string name="string_masukkan_nama">Masukkan Nama</string>
     <string name="string_outputnama">Nama Anda</string>
     <string name="string_suku_bunga">Suku Bunga (% p/a)</string>
@@ -13,4 +13,10 @@
     <string name="string_tv_total_tabungan">Total Tabungan :</string>
     <string name="string_tv_lama_bunga_tersimpan_bulan">Lama Bunga Tersimpan : (Bulan)</string>
     <string name="string_tv_total_bunga_yang_didapat_rp_blabla_per_3_bulan">Total Bunga yang didapat : Rp.blabla per 3 Bulan</string>
+    <string name="error_et_halaman2">Nama harus diisi dulu!</string>
+    <string name="string_nama_bank_4">Nama Bank : %s</string>
+    <string name="string_tingkat_bunga_4">Tingkat Suku Bunga : %s%% p/a</string>
+    <string name="string_total_tabungan_4">Total Tabungan : Rp.%s</string>
+    <string name="string_hasil_bunga_4">Dalam Waktu %1s Bulan, Bunga yang diperoleh sebesar Rp.%2s</string>
+    <string name="error_empty_input_halaman4">Semua Field harus diisi! Tidak boleh kosong</string>
 </resources>
