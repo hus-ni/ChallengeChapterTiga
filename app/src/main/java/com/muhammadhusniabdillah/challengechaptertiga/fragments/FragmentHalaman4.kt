@@ -68,11 +68,10 @@ class FragmentHalaman4 : Fragment(R.layout.fragment_halaman4) {
                 // Directions dari action fragment 4 ke fragment 3
                 val sendDataToFragment3 =
                     FragmentHalaman4Directions.actionFragmentHalaman4ToFragmentHalaman3()
-                sendDataToFragment3.nama = hitungBunga.toInt().toString()
-                sendDataToFragment3.dataHalaman4 = data
-
                 // menggunakan argument 'nama' yang tidak dipakai pada saat sampai di fragment 4
                 // untuk mengirim data hasil perhitungan menggunakan safeargs
+                sendDataToFragment3.nama = hitungBunga.toInt().toString()
+                sendDataToFragment3.dataHalaman4 = data
 
                 findNavController()
                     .navigate(sendDataToFragment3)

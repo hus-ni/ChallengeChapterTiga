@@ -62,7 +62,7 @@
             app:exitAnim="@android:anim/slide_out_right">
             <argument
                 android:name="nama"
-                android:defaultValue="null" />
+                android:defaultValue="empty" />
         </action>
     </fragment>
 </navigation>
